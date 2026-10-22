@@ -1,5 +1,7 @@
 add_rules("mode.debug", "mode.release")
 
+set_languages("c++29")
+
 add_requires("raylib")
 
 target("snake-3d")
