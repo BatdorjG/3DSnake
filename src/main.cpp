@@ -1,8 +1,14 @@
 #include <raylib.h>
 #include <raymath.h>
 
+#include "std.h"
+
 int main(int argc, char **argv) 
 {
+    printf("Hello World");
+
+    std::cout << "Hello World\n" ;
+
     InitWindow(1536, 960, "Snake");
     SetTargetFPS(60);
     
