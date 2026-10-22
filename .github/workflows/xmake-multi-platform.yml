@@ -21,6 +21,10 @@ jobs:
     - uses: xmake-io/github-action-setup-xmake@v1
       with:
         xmake-version: latest
+    
+    - name: Install Linux deps
+      if: runner.os == 'Linux'
+      run: sudo apt-get update && sudo apt-get install -y libgl1-mesa-dev libglu1-mesa-dev pkg-config
 
     - name: Cache xmake packages
       uses: actions/cache@v4
